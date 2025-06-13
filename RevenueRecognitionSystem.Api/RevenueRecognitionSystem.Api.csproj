@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+      <UserSecretsId>de0209f3-2bc0-42e6-a710-a2f186387b4c</UserSecretsId>
+      <RootNamespace>RevenueRecognitionSystem</RootNamespace>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    </ItemGroup>
+
+</Project>

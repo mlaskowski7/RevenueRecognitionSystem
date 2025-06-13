@@ -1,0 +1,13 @@
+services:
+  mssql_db:
+    image: mcr.microsoft.com/mssql/server:latest
+    platform: linux/amd64
+    ports:
+      - "1433:1433"
+    env_file:
+      - db.env
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+volumes:
+  mssql_data:
