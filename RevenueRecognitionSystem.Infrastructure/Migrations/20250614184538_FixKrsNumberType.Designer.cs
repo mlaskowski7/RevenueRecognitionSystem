@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RevenueRecognitionSystem.Infrastructure.Database;
 
@@ -11,9 +12,11 @@ using RevenueRecognitionSystem.Infrastructure.Database;
 namespace RevenueRecognitionSystem.Infrastructure.Migrations
 {
     [DbContext(typeof(RevenuesDbContext))]
-    partial class RevenuesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250614184538_FixKrsNumberType")]
+    partial class FixKrsNumberType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

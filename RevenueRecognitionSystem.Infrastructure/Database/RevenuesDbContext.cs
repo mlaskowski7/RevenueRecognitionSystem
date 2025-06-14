@@ -3,7 +3,7 @@ using RevenueRecognitionSystem.Domain.Models;
 
 namespace RevenueRecognitionSystem.Infrastructure.Database;
 
-public class RevenuesDbContext(DbContextOptions opt) : DbContext(opt)
+public class RevenuesDbContext(DbContextOptions<RevenuesDbContext> opt) : DbContext(opt)
 {
     public DbSet<IndividualClient> IndividualClients { get; set; }
     

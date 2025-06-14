@@ -20,6 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\RevenueRecognitionSystem.Application\RevenueRecognitionSystem.Application.csproj" />
       <ProjectReference Include="..\RevenueRecognitionSystem.Domain\RevenueRecognitionSystem.Domain.csproj" />
     </ItemGroup>
 

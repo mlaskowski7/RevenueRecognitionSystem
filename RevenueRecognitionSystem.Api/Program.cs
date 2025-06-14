@@ -1,3 +1,4 @@
+using RevenueRecognitionSystem.Application;
 using RevenueRecognitionSystem.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddInfraServices(builder.Configuration);
+builder.Services
+    .AddInfraServices(builder.Configuration)
+    .AddAppServices();
 
 var app = builder.Build();
 

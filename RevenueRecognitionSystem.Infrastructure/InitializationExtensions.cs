@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RevenueRecognitionSystem.Application.Repositories;
 using RevenueRecognitionSystem.Infrastructure.Database;
+using RevenueRecognitionSystem.Infrastructure.Repositories;
 
 namespace RevenueRecognitionSystem.Infrastructure;
 
@@ -18,6 +20,6 @@ public static class InitializationExtensions
 
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
-        return services;
+        return services.AddScoped<IClientRepository, ClientRepository>();
     }
 }
