@@ -10,6 +10,10 @@ public class RevenuesDbContext(DbContextOptions<RevenuesDbContext> opt) : DbCont
     public DbSet<CompanyClient> CompanyClients { get; set; }
     
     public DbSet<Client> Clients { get; set; }
+    
+    public DbSet<Discount> Discounts { get; set; }
+    
+    public DbSet<SoftwareSystem> SoftwareSystems { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
