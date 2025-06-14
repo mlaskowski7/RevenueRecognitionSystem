@@ -75,7 +75,7 @@ public class ClientService(IClientRepository clientRepository, IClientMapper cli
             return Result<ClientResponseDto>.Err(Error.NotFound($"Client with id {clientId} was not found"));
         }
 
-        switch (client!, updateClientRequestDto)
+        switch (client, updateClientRequestDto)
         {
             case (CompanyClient, UpdateIndividualClientRequestDto):
                 return Result<ClientResponseDto>.Err(Error.BadRequest($"Client with id {clientId} is a company, cannot update with fields for individual clients"));

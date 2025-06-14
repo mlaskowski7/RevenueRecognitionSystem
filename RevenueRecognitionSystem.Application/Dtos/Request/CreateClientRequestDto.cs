@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace RevenueRecognitionSystem.Application.Dtos.Request;
 
-[JsonPolymorphic(TypeDiscriminatorPropertyName = "$clientType")]
+[JsonPolymorphic(TypeDiscriminatorPropertyName = "clientType")]
 [JsonDerivedType(typeof(CreateIndividualClientRequestDto), typeDiscriminator: "individual")]
 [JsonDerivedType(typeof(CreateCompanyClientRequestDto), typeDiscriminator: "company")]
 public abstract class CreateClientRequestDto
