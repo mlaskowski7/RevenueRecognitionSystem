@@ -23,9 +23,5 @@ public class ClientTypeConfiguration : IEntityTypeConfiguration<Client>
         builder.Property(c => c.Email)
             .HasMaxLength(50)
             .IsRequired();
-        
-        builder.Property(c => c.IsDeleted)
-            .IsRequired()
-            .HasDefaultValue(false);
     }
 }

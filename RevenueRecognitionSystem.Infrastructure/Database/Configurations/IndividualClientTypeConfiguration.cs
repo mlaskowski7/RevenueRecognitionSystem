@@ -22,5 +22,9 @@ public class IndividualClientTypeConfiguration : IEntityTypeConfiguration<Indivi
         builder.Property(c => c.Pesel)
             .HasMaxLength(11)
             .IsRequired();
+        
+        builder.Property(c => c.IsDeleted)
+            .HasDefaultValue(false)
+            .IsRequired();
     }
 }
