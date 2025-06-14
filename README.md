@@ -12,7 +12,12 @@ dotnet user-secrets init
 dotnet user-secrets set "ConnectionStrings:DefaultConnection" "<connection_string_according_to_db_env>"
 ```
 
-3. Run the app
+3. Run migrations
+```
+dotnet ef database update --startup-project RevenueRecognitionSystem.Api --project RevenueRecognitionSystem.Infrastructure
+```
+
+4. Run the app
 ```
 cd RevenueRecognitionSystem.Api
 dotnet run
