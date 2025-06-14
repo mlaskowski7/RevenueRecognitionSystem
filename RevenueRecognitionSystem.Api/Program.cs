@@ -1,6 +1,7 @@
 using RevenueRecognitionSystem.Application;
 using RevenueRecognitionSystem.Extensions;
 using RevenueRecognitionSystem.Infrastructure;
+using RevenueRecognitionSystem.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services
     .AddAppServices();
 
 var app = builder.Build();
+
+app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
