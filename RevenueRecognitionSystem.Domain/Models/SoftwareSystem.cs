@@ -15,4 +15,6 @@ public class SoftwareSystem
     public required bool IsSoldUpfront { get; set; }
     
     public required bool IsSoldAsSubscription { get; set; }
+    
+    public required decimal PricePerYear { get; set; }
 }
